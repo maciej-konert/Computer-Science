@@ -1,4 +1,4 @@
-#Wprowadzenie
+# Wprowadzenie
 Gra Reversi , znana też pod nazwą Othello, jest rozgrywana na 64-polowej planszy podzielonej na wiersze od 1 do 8 i kolumny od a do h. Pola nazywamy, wskazując najpierw kolumnę a następnie wiersz.
 
 W Reversi gra się dwustronnymi czarno-białymi pionami. Na każdym polu może być co najwyżej jeden pion. Jeśli pion w danej chwili jest odwrócony do góry stroną czarną, nazywamy go pionem czarnym, jeśli białą - jest pionem białym.
