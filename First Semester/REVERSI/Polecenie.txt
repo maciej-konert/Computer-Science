@@ -1,1 +1,140 @@
+Wprowadzenie
+System Lindenmayera, w skrócie L-system , to system formalny definiujący języki. Został stworzony w celu modelowania roślin przez biologa, Aristida Lindenmayera.
 
+Deterministyczny bezkontekstowy L-system, nazywany D0L, jest trójką (S, A, R), w której S to alfabet, A jest słowem nad S nazywanym aksjomatem, a R to zbiór reguł zastępowania, wiążących symbole ze słowami nad S. Dla każdego elementu S, w R jest co najwyżej jedna reguła.
+
+Słowo w należy do języka definiowanego przez L-system wtedy i tylko wtedy, gdy istnieje nieujemna liczba całkowita n taka, że w ma wyprowadzenie długości n. Przyjmujemy, że aksjomat ma wyprowadzenie długości 0. Słowo o wyprowadzeniu długości n + 1 powstaje ze słowa o wyprowadzeniu długości n przez jednoczesne zastąpienie każdego symbolu słowem określonym przez jego regułę, lub pozostawienie go bez zmian, jeśli nie ma dla niego reguły.
+
+Rozważamy tekstową interpretację słów języka definiowanego przez L-system. Interpretacja zaczyna się do ciągu wierszy, nazywanego prologiem, po nim jest ciąg wierszy odpowiadających poszczególnym symbolom słowa, a na zakończenie jest ciąg wierszy nazywany epilogiem. Wiersze odpowiadające symbolom określone są za pomocą reguł interpretacji. Dla każdego symbolu mamy co najwyżej jedną regułę interpretacji. Symbole słowa, dla których nie określono interpretacji, są w niej pomijane.
+
+Polecenie
+Napisz program, który czyta z wejścia długość wyprowadzenia, opis L-systemu oraz jego interpretacji i pisze na wyjście interpretację wyprowadzonego słowa należącego do języka definiowanego przez L-system.
+
+Postać danych
+Na wejściu programu jest wiersz z nieujemną liczbą całkowitą określającą długość wyprowadzenia, wiersze opisu L-systemu i wiersze opisu interpretacji słowa.
+
+Opis L-systemu składa się z wiersza zawierającego aksjomat, po którym następuje ciąg wierszy z regułami zastępowania. Wiersz reguły zastępowania zaczyna się od zastępowanego symbolu, a po nim jest zastępujące go słowo. Alfabet L-systemu nie jest jawnie podany. Przyjmujemy, że jest zbiorem symboli występujących w aksjomacie i regułach zastępowania.
+
+Opis interpretacji słowa zaczyna się od ciągu wierszy prologu, po nim są wiersze reguł interpretacji, a po nich wiersze epilogu. Każdy z tych trzech ciągów jest poprzedzony wierszem pustym. Wiersz reguły interpretacji zaczyna się od interpretowanego symbolu, a reszta wiersza jest tekstem, który dla tego symbolu należy wypisać na wyjście.
+
+Postać wyniku
+Wynikiem programu jest ciąg wierszy będący interpretacją słowa.
+
+Przykłady
+Do treści zadania dołączone są pliki .in z przykładowymi danymi i pliki .out z wynikami wzorcowymi.
+
+Dla danych przyklad1.in poprawny wynik to przyklad1.out .
+
+Dla danych przyklad2.in poprawny wynik to przyklad2.out .
+
+Dla danych przyklad3.in poprawny wynik to przyklad3.out .
+
+Galeria
+Poniższe obrazki powstały na podstawie książki Prusinkiewicza i Lindenmayera The Algorithmic Beauty of Plants .
+
+Rozwiązanie zadania, uruchomione na danych z pliku .in, generuje plik w języku Postscript. Można go przekształcić do formatu .pdf programem ps2pdf.
+
+Z pliku obrazek1.in powstaje obrazek obrazek1.pdf .
+
+Z pliku obrazek2.in powstaje obrazek obrazek2.pdf .
+
+Z pliku obrazek3.in powstaje obrazek obrazek3.pdf .
+
+Z pliku obrazek4.in powstaje obrazek obrazek4.pdf .
+
+Z pliku obrazek5.in powstaje obrazek obrazek5.pdf .
+
+Z pliku obrazek6.in powstaje obrazek obrazek6.pdf .
+
+Z pliku obrazek7.in powstaje obrazek obrazek7.pdf .
+
+Z pliku obrazek8.in powstaje obrazek obrazek8.pdf .
+
+Z pliku obrazek9.in powstaje obrazek obrazek9.pdf .
+
+Z pliku obrazek10.in powstaje obrazek obrazek10.pdf .
+
+Walidacja i testy
+Rozwiązania podlegają walidacji, wstępnie badającej zgodność ze specyfikacją.
+
+Walidacja sprawdza działanie programu na przykładach dołączonych do treści zadania.
+
+Pomyślne przejście walidacji jest warunkiem dopuszczenia programu do testów poprawności. Program, który walidacji nie przejdzie, dostaje zerową ocenę poprawności.
+
+Walidacja i testy są prowadzone na komputerze students.
+
+Programy są kompilowane poleceniem:
+
+gcc @opcje nazwa.c -o nazwa
+gdzie nazwa.c to nazwa pliku z kodem źródłowym, a plik opcje ma zawartość:
+
+-std=c17
+-pedantic
+-Wall
+-Wextra
+-Wformat-security
+-Wduplicated-cond
+-Wfloat-equal
+-Wshadow
+-Wconversion
+-Wjump-misses-init
+-Wlogical-not-parentheses
+-Wnull-dereference
+-Wvla
+-Werror
+-fstack-protector-strong
+-fsanitize=undefined
+-fno-sanitize-recover
+-g
+-fno-omit-frame-pointer
+-O1
+Opcje -std=c17, -pedantic wskazują, że kompilator ma dbać o zgodność kodu z aktualnym standardem języka C.
+
+Dzięki opcjom -Wall, -Wextra kompilator zgłosi zauważone usterki.
+
+Opcje -Wformat-security, -Wduplicated-cond, -Wfloat-equal, -Wshadow, -Wconversion, -Wjump-misses-init, -Wlogical-not-parentheses, -Wnull-dereference umożliwiają wykrywanie dodatkowych usterek.
+
+Opcja -Wvla sprawia, że użycie tablic zmiennej długości jest uznawane za usterkę.
+
+Opcja -Werror wskazuje, że kompilator ma uznać usterki za błędy.
+
+Dzięki opcji -fstack-protector-strong, podczas wykonania programu zostaną wykryte niektóre błędne odwołania do pamięci na stosie.
+
+Opcje -fsanitize=undefined, -fno-sanitize-recover umożliwiają wykrywanie operacji, które mają efekt nieokreślony.
+
+Opcje -g, -fno-omit-frame-pointer poprawiają jakość komunikatów o błędach wykonania.
+
+Opcja -O1 włącza optymalizacje, co zwiększa prawdopodobieństwo ujawnienia się błędów.
+
+Wymagane są wszystkie wymienione opcje kompilatora. Nie będą do nich dodawane żadne inne.
+
+Zwracamy uwagę, że poszczególne wersje kompilatora gcc mogą się różnić sposobem obsługi tych samych opcji. Przed wysłaniem rozwiązania warto więc skompilować je i przetestować na students w sposób opisany powyżej.
+
+Podczas walidacji i testów, program nazwa jest uruchamiany pod kontrolą programu Valgrind poleceniem:
+
+valgrind --leak-check=full -q --error-exitcode=1 ./nazwa
+Jeśli Valgrind wykryje błąd, to nawet gdyby wynik był prawidłowy, uznajemy, że program testu nie przeszedł.
+
+Opcja -q powoduje, że jedynymi informacjami, wypisywanymi przez program Valgrind, są komunikaty o błędach.
+
+Opcja --leak-check=full wskazuje Valgrindowi, że powinien, między innymi, szukać wycieków pamięci.
+
+Opcja --error-exitcode=1 określa kod wyjścia programu w przypadku, gdy Valgrind wykryje błąd.
+
+Przyjmujemy, że niezerowy wynik funkcji main() informuje o błędzie wykonania programu.
+
+Poprawność wyniku sprawdzamy, przekierowując na wejście programu zawartość pliku .in i porównując rezultat, za pomocą programu diff, z plikiem .out, np.:
+
+< przyklad.in ./nazwa | diff - przyklad.out
+Ocena poprawności wyniku jest binarna. Wynik uznajemy za poprawny, jeżeli program diff nie wskaże żadnej różnicy względem wyniku wzorcowego.
+
+Uwagi i wskazówki
+Jako rozwiązanie należy wysłać plik tekstowy .c z kodem źródłowym w języku C.
+
+Wolno założyć, że dane są poprawne.
+
+Wolno założyć, że każdy wiersz danych, w tym ostatni, kończy się reprezentacją końca wiersza '\n'. Należy zadbać, by warunek ten spełniał także wynik programu.
+
+Wolno założyć, że znaki na wejściu programu mają kody od zera do wartości stałej CHAR_MAX, która jest zdefiniowana w pliku nagłówkowym limits.h.
+
+Wolno założyć, że najdłuższy wiersz na wejściu programu, bez reprezentacji końca wiersza, ma nie więcej niż 100 znaków.
