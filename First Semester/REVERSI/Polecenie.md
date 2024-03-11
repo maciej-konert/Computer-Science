@@ -1,4 +1,4 @@
-<hx>Wprowadzenie</hx>
+<h3>Wprowadzenie</h3>
 System Lindenmayera, w skrócie L-system , to system formalny definiujący języki. Został stworzony w celu modelowania roślin przez biologa, Aristida Lindenmayera.
 
 Deterministyczny bezkontekstowy L-system, nazywany D0L, jest trójką (S, A, R), w której S to alfabet, A jest słowem nad S nazywanym aksjomatem, a R to zbiór reguł zastępowania, wiążących symbole ze słowami nad S. Dla każdego elementu S, w R jest co najwyżej jedna reguła.
