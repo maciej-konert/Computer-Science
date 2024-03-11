@@ -7,20 +7,20 @@ Słowo w należy do języka definiowanego przez L-system wtedy i tylko wtedy, gd
 
 Rozważamy tekstową interpretację słów języka definiowanego przez L-system. Interpretacja zaczyna się do ciągu wierszy, nazywanego prologiem, po nim jest ciąg wierszy odpowiadających poszczególnym symbolom słowa, a na zakończenie jest ciąg wierszy nazywany epilogiem. Wiersze odpowiadające symbolom określone są za pomocą reguł interpretacji. Dla każdego symbolu mamy co najwyżej jedną regułę interpretacji. Symbole słowa, dla których nie określono interpretacji, są w niej pomijane.
 
-#Polecenie
+<h3>Polecenie</h3>
 Napisz program, który czyta z wejścia długość wyprowadzenia, opis L-systemu oraz jego interpretacji i pisze na wyjście interpretację wyprowadzonego słowa należącego do języka definiowanego przez L-system.
 
-#Postać danych
+<h3>Postać danych</h3>
 Na wejściu programu jest wiersz z nieujemną liczbą całkowitą określającą długość wyprowadzenia, wiersze opisu L-systemu i wiersze opisu interpretacji słowa.
 
 Opis L-systemu składa się z wiersza zawierającego aksjomat, po którym następuje ciąg wierszy z regułami zastępowania. Wiersz reguły zastępowania zaczyna się od zastępowanego symbolu, a po nim jest zastępujące go słowo. Alfabet L-systemu nie jest jawnie podany. Przyjmujemy, że jest zbiorem symboli występujących w aksjomacie i regułach zastępowania.
 
 Opis interpretacji słowa zaczyna się od ciągu wierszy prologu, po nim są wiersze reguł interpretacji, a po nich wiersze epilogu. Każdy z tych trzech ciągów jest poprzedzony wierszem pustym. Wiersz reguły interpretacji zaczyna się od interpretowanego symbolu, a reszta wiersza jest tekstem, który dla tego symbolu należy wypisać na wyjście.
 
-#Postać wyniku
+<h3>Postać wyniku</h3>
 Wynikiem programu jest ciąg wierszy będący interpretacją słowa.
 
-#Walidacja i testy
+<h3>Walidacja i testy</h3>
 Rozwiązania podlegają walidacji, wstępnie badającej zgodność ze specyfikacją.
 
 Walidacja sprawdza działanie programu na przykładach dołączonych do treści zadania.
@@ -53,7 +53,7 @@ gdzie nazwa.c to nazwa pliku z kodem źródłowym, a plik opcje ma zawartość:
 -fno-omit-frame-pointer
 -O1
 
-#Uwagi i wskazówki
+<h3>Uwagi i wskazówki</h3>
 Jako rozwiązanie należy wysłać plik tekstowy .c z kodem źródłowym w języku C.
 
 Wolno założyć, że dane są poprawne.
