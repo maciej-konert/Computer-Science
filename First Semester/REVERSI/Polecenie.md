@@ -15,7 +15,7 @@ Choć nie jest to zgodne z regułami gry w Reversi, w tym zadaniu pozwalamy grac
 
 Kolejna reguła, która również u nas nie obowiązuje, określa że gra automatycznie kończy się, gdy żaden z graczy nie może wykonać legalnego ruchu. Zwycięzcą zostaje wówczas gracz, który ma na planszy więcej pionów swojego koloru.
 
-#Polecenie
+## Polecenie
 Napisz program umożliwiający grę w Reversi dwóm graczom.
 
 Program, w pętli:
@@ -32,7 +32,7 @@ jeśli wczytał polecenie wykonania ruchu, to wykonuje ten ruch i wraca na pocz�
 
 Program nie kończy pracy przed dojściem do polecenia przerwania gry, nawet gdyby stwierdził, że żaden z graczy nie może wykonać legalnego ruchu. Nie uznaje też za błąd sytuacji, w której użytkownik rezygnuje z ruchu lub prosi o przerwania gry, choć może wykonać legalny ruch.
 
-#Postać danych
+## Postać danych
 Na wejściu programu są polecenia graczy. Każde polecenie zajmuje jeden wiersz. Wszystkie polecenia mają poprawną postać. Polecenia wykonania ruchu wskazują ruch legalny. Po poleceniu przerwania gry jest dowolny tekst, ignorowany przez program.
 
 Polecenie przerwania gry ma postać wiersza o treści =.
@@ -41,7 +41,7 @@ Polecenie rezygnacji z ruchu ma postać wiersza o treści -.
 
 Polecenie wykonania ruchu ma postać wiersza z nazwą pola.
 
-#Postać wyniku
+## Postać wyniku
 Na wyjściu programu jest ciąg tekstów zachęty. Każdy z nich zajmuje jeden wiersz.
 
 Tekst zachęty zaczyna się od wskazania gracza, do którego należy ruch:
@@ -52,7 +52,7 @@ znak B wskazuje gracza Białego.
 
 Resztę treści tekstu zachęty stanowi ciąg nazw pól, na których gracz może położyć swojego piona. Nazwy są uporządkowane leksykograficznie. Każda nazwa jest poprzedzona spacją.
 
-#Walidacja i testy
+## Walidacja i testy
 Rozwiązania podlegają walidacji, wstępnie badającej zgodność ze specyfikacją.
 
 Walidacja sprawdza działanie programu na przykładach dołączonych do treści zadania.
@@ -105,7 +105,7 @@ Poprawność wyniku sprawdzamy, przekierowując na wejście programu zawartość
 < przyklad.in ./nazwa | diff - przyklad.out
 Ocena poprawności wyniku jest binarna. Wynik uznajemy za poprawny, jeżeli program diff nie wskaże żadnej różnicy względem wyniku wzorcowego.
 
-#Uwagi i wskazówki
+## Uwagi i wskazówki
 Jako rozwiązanie należy wysłać plik tekstowy .c z kodem źródłowym w języku C.
 
 Wolno założyć, że dane są poprawne.
